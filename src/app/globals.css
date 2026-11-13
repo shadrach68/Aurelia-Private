@@ -24,3 +24,105 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes motion-enter {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes motion-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes motion-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.motion-enter {
+  animation: motion-enter 650ms cubic-bezier(0.2, 0.8, 0.2, 1) backwards;
+}
+
+.motion-enter-delay-1 {
+  animation-delay: 80ms;
+}
+
+.motion-enter-delay-2 {
+  animation-delay: 160ms;
+}
+
+.motion-enter-delay-3 {
+  animation-delay: 240ms;
+}
+
+.motion-overlay {
+  animation: motion-fade 180ms ease-out both;
+}
+
+.motion-drawer {
+  animation: motion-slide-in 240ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.motion-card {
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.motion-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 38px rgb(0 0 0 / 22%);
+}
+
+.motion-control {
+  transition: transform 180ms ease;
+}
+
+.motion-control:hover {
+  transform: translateY(-1px);
+}
+
+.motion-control:active {
+  transform: scale(0.98);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-enter,
+  .motion-overlay,
+  .motion-drawer {
+    animation: none;
+  }
+
+  .animate-spin {
+    animation: none !important;
+  }
+
+  .motion-card,
+  .motion-control {
+    transition: none;
+  }
+
+  .motion-card:hover,
+  .motion-control:hover,
+  .motion-control:active {
+    transform: none;
+  }
+}

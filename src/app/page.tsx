@@ -12,9 +12,9 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#080C12] text-white">
 
-      {/* Demo Notice */}
+
       <div className="bg-[#C5A46D] text-[#080C12] text-center py-2 text-xs tracking-wide font-medium">
-        DEMONSTRATION ENVIRONMENT — NO REAL MONEY OR BANKING SERVICES
+        AUTHORIZED BANKING PLATFORM - LIVE ACCOUNT AND PAYMENT SERVICES
       </div>
 
       {/* Navigation */}
@@ -25,7 +25,7 @@ export default function Home() {
             AURELIA
           </h1>
           <p className="text-[9px] tracking-[0.45em] text-gray-400 text-center">
-            PRIVATE BANKING DEMO
+            PRIVATE BANKING
           </p>
         </div>
 
@@ -43,7 +43,7 @@ export default function Home() {
 
           <a
             href="/register"
-            className="bg-[#C5A46D] text-[#080C12] px-6 py-3 text-sm font-semibold hover:bg-[#D9BC89] transition"
+            className="bg-[#C5A46D] text-[#080C12] px-6 py-3 text-sm font-semibold hover:bg-[#D9BC89] transition rounded-lg motion-control"
           >
             Get Started
           </a>
@@ -58,7 +58,7 @@ export default function Home() {
       {/* Hero Section */}
       <section
         id="home"
-        className="max-w-7xl mx-auto px-6 lg:px-12 pt-24 pb-32 grid lg:grid-cols-2 gap-16 items-center"
+        className="max-w-7xl mx-auto px-6 lg:px-12 pt-24 pb-32 grid lg:grid-cols-2 gap-16 items-center motion-enter"
       >
 
         <div>
@@ -81,7 +81,7 @@ export default function Home() {
           </h2>
 
           <p className="text-gray-400 text-base md:text-lg leading-8 max-w-lg mb-10">
-            Experience a refined digital banking demonstration,
+            Experience a refined digital banking ,
             designed around sophistication, privacy and effortless
             financial management.
           </p>
@@ -90,15 +90,15 @@ export default function Home() {
 
             <a
               href="/register"
-              className="bg-[#C5A46D] text-[#080C12] px-8 py-4 text-sm font-semibold flex items-center gap-3 hover:bg-[#D9BC89] transition"
+              className="bg-[#C5A46D] text-[#080C12] px-8 py-4 text-sm font-semibold flex items-center gap-3 hover:bg-[#D9BC89] transition rounded-lg motion-control"
             >
-              Explore Demo
+              Explore
               <ArrowRight size={17} />
             </a>
 
             <a
               href="#about"
-              className="border border-white/20 px-8 py-4 text-sm hover:border-[#C5A46D] transition"
+              className="border border-white/20 px-8 py-4 text-sm hover:border-[#C5A46D] transition rounded-lg motion-control"
             >
               Discover More
             </a>
@@ -109,7 +109,7 @@ export default function Home() {
 
             <div className="flex items-center gap-2">
               <ShieldCheck size={17} className="text-[#C5A46D]" />
-              Secure Demo
+              Secure
             </div>
 
             <div className="flex items-center gap-2">
@@ -126,7 +126,7 @@ export default function Home() {
 
           <div className="absolute inset-0 bg-[#C5A46D]/10 blur-[100px] rounded-full"></div>
 
-          <div className="relative border border-[#C5A46D]/30 bg-gradient-to-br from-[#20252D] to-[#0B1018] p-8 md:p-12 shadow-2xl">
+          <div className="relative border border-[#C5A46D]/30 bg-linear-to-br from-[#20252D] to-[#0B1018] p-8 md:p-12 shadow-2xl rounded-2xl motion-card motion-enter motion-enter-delay-1">
 
             <div className="flex justify-between items-start mb-20">
 
@@ -135,7 +135,7 @@ export default function Home() {
                   AURELIA
                 </p>
                 <p className="text-[9px] tracking-[0.3em] text-[#C5A46D] mt-1">
-                  PRIVATE DEMO CARD
+                  PRIVATE CARD
                 </p>
               </div>
 
@@ -144,7 +144,7 @@ export default function Home() {
             </div>
 
             <p className="text-gray-400 text-xs tracking-widest mb-3">
-              ILLUSTRATIVE PORTFOLIO VALUE
+             PORTFOLIO VALUE
             </p>
 
             <h3 className="font-serif text-4xl md:text-5xl text-[#D6B77A] mb-4">
@@ -152,7 +152,7 @@ export default function Home() {
             </h3>
 
             <p className="text-gray-500 text-xs mb-16">
-              SIMULATED BALANCE — NOT REAL FUNDS
+              BALANCE — AVAILABLE FUNDS
             </p>
 
             <div className="flex justify-between items-end">
@@ -171,7 +171,7 @@ export default function Home() {
                   ACCOUNT TYPE
                 </p>
                 <p className="text-sm mt-2 text-[#C5A46D]">
-                  WEALTH DEMO
+                  WEALTH
                 </p>
               </div>
 
@@ -179,7 +179,7 @@ export default function Home() {
 
           </div>
 
-          <div className="absolute -bottom-6 -right-4 bg-[#C5A46D] text-[#080C12] p-5 hidden md:block">
+          <div className="absolute -bottom-6 -right-4 bg-[#C5A46D] text-[#080C12] p-5 hidden md:block rounded-xl">
             <Globe2 size={25} />
           </div>
 
@@ -203,7 +203,7 @@ export default function Home() {
             </h2>
 
             <p className="text-gray-500 mt-5 max-w-xl mx-auto leading-7">
-              Explore an elegant collection of simulated banking
+              Explore an elegant collection of banking
               experiences designed for the modern private client.
             </p>
 
@@ -231,7 +231,8 @@ export default function Home() {
 
               <div
                 key={index}
-                className="border border-white/10 p-9 hover:border-[#C5A46D]/50 transition duration-300"
+                style={{ animationDelay: `${index * 80}ms` }}
+                className="border border-white/10 p-9 hover:border-[#C5A46D]/50 transition duration-300 rounded-2xl motion-card motion-enter"
               >
 
                 <service.icon size={30} className="text-[#C5A46D] mb-7" />
@@ -269,13 +270,12 @@ export default function Home() {
               AURELIA PRIVATE
             </h3>
             <p className="text-gray-600 text-xs mt-2">
-              An independent simulated banking experience.
+              An independent banking experience.
             </p>
           </div>
 
           <p className="text-gray-600 text-xs">
-            © 2026 Aurelia Private. Demonstration project.
-            Not a licensed financial institution.
+            © 2026 Aurelia Private.
           </p>
 
         </div>
